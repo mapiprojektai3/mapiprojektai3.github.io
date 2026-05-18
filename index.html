@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAPI PROJEKTAI, MB</title>
+<style>
+body {
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f0f4f8;
+    color:#333;
+    line-height:1.6;
+}
+h1,h2,h3 { margin:0 0 15px 0; text-align:center; }
+p { text-align:center; max-width:800px; margin:10px auto; }
+
+section { padding:100px 20px; opacity:0; transform:translateY(50px); transition:all 1s ease-out; }
+section.show { opacity:1; transform:translateY(0); }
+.separator { width:80px; height:5px; background:linear-gradient(90deg,#00b4d8,#0077b6); margin:20px auto 40px auto; border-radius:3px; }
+
+header {
+    height:100vh;
+    background:url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260') center/cover no-repeat fixed;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    text-align:center;
+    position:relative;
+}
+header::after {
+    content:"";
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.5);
+}
+header h1 { font-size:3em; z-index:1; position:relative; }
+header p { font-size:1.3em; z-index:1; margin-bottom:30px; position:relative; }
+header .cta {
+    display:inline-block;
+    padding:15px 40px;
+    background:#48cae4;
+    border-radius:50px;
+    color:#fff;
+    font-weight:bold;
+    transition:0.3s;
+    z-index:1;
+    position:relative;
+}
+header .cta:hover { background:#0096c7; transform:translateY(-5px); }
+
+.image-block {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+.image-block .img-card {
+    flex:1 1 300px;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    transition:transform 0.3s, box-shadow 0.3s;
+    position:relative;
+}
+.image-block .img-card:hover {
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+.img-card img { width:100%; display:block; border-radius:25px; }
+.img-card h3 { margin-top:10px; }
+.img-card p { padding:0 10px; z-index:1; position:relative; }
+
+.contact-info { text-align:center; font-size:1.1em; margin-bottom:25px; }
+.contact-info a { color:#0077b6; text-decoration:underline; }
+
+form { max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px; }
+form input,form textarea { padding:12px; border-radius:12px; border:1px solid #ccc; font-size:1em; }
+form button {
+    padding:15px;
+    border:none;
+    border-radius:50px;
+    background:#0077b6;
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+form button:hover { background:#0096c7; transform:translateY(-3px); }
+.error { color:#d00000; font-size:0.9em; }
+.success { color:#00917c; text-align:center; font-size:1em; }
+
+footer { text-align:center; padding:40px 20px; background:#0077b6; color:#fff; font-size:0.9em; }
+
+h2:hover { color:#0096c7; transition:0.3s; }
+
+@media(max-width:768px){ .image-block { flex-direction:column; } }
+</style>
+</head>
+<body>
+
+<header>
+<h1>MAPI PROJEKTAI, MB</h1>
+<p>Efektyvūs verslo, projektų koordinavimo, marketingo ir e-komercijos sprendimai, pritaikyti jūsų verslo poreikiams.</p>
+<a href="#contact" class="cta">Kreiptis</a>
+</header>
+
+<section id="about">
+<h2>Apie mus</h2>
+<div class="separator"></div>
+<p>MAPI PROJEKTAI, MB – patikimas partneris verslo konsultacijose, projektų koordinavime ir marketingo strategijų kūrime.</p>
+<p>Teikiame individualizuotas konsultacijas, atitinkančias kliento unikalius poreikius, siekdami, kad kiekviena rekomendacija būtų praktiška ir lengvai įgyvendinama.</p>
+</section>
+
+<section id="services">
+<h2>Pagrindinės paslaugos</h2>
+<div class="separator"></div>
+<div class="image-block">
+<div class="img-card">
+<img src="https://images.pexels.com/photos/3184434/pexels-photo-3184434.jpeg?auto=compress&cs=tinysrgb&h=500" alt="Verslo valdymas">
+<h3>Verslo valdymas</h3>
+<p>Padedame įmonėms kurti efektyvią organizacinę struktūrą, optimizuoti administracinius procesus ir didinti veiklos efektyvumą.</p>
+</div>
+<div class="img-card">
+<img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&h=500" alt="Projektų koordinavimas">
+<h3>Projektų koordinavimas</h3>
+<p>Įgyvendiname projektus nuo planavimo iki rezultatų analizės, užtikrindami aukštą kokybę ir laiku įgyvendinamus sprendimus.</p>
+</div>
+<div class="img-card">
+<img src="https://images.pexels.com/photos/3184299/pexels-photo-3184299.jpeg?auto=compress&cs=tinysrgb&h=500" alt="Marketingo konsultacijos">
+<h3>Marketingo konsultacijos</h3>
+<p>Padedame optimizuoti rinkodaros strategijas, didinti prekės ženklo matomumą, klientų įsitraukimą ir pardavimų rezultatus.</p>
+</div>
+<div class="img-card">
+<img src="https://images.pexels.com/photos/3861953/pexels-photo-3861953.jpeg?auto=compress&cs=tinysrgb&h=500" alt="E-komercijos sprendimai">
+<h3>E-komercijos sprendimai</h3>
+<p>Konsultuojame dėl platformų optimizavimo, klientų patirties gerinimo ir pardavimų didinimo strategijų.</p>
+</div>
+</div>
+</section>
+
+<section id="process">
+<h2>Mūsų procesas</h2>
+<div class="separator"></div>
+<p>Projektai pradedami nuo verslo analizės, strategijų planavimo ir tikslų nustatymo. Kiekvienas etapas vykdomas glaudžiai bendradarbiaujant su klientu.</p>
+<p>Kontroliuojame veiksmus, tikriname pažangą ir koreguojame sprendimus pagal poreikį, leidžiant klientams pasiekti efektyvų ir tvarų augimą.</p>
+</section>
+
+<section id="vision">
+<h2>Vizija</h2>
+<div class="separator"></div>
+<p>Mūsų vizija – būti patikimu verslo konsultacijų partneriu, nuolat diegiant inovacijas ir padedant klientams pasiekti ilgalaikę sėkmę.</p>
+</section>
+
+<section id="values">
+<h2>Vertybės</h2>
+<div class="separator"></div>
+<div class="image-block">
+<div class="img-card">
+<img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&h=500" alt="Profesionalumas">
+<h3>Profesionalumas</h3>
+<p>Veikiame atsakingai, užtikriname aukščiausią darbo kokybę ir patikimumą kiekviename projekte.</p>
+</div>
+<div class="img-card">
+<img src="https://images.pexels.com/photos/355952/pexels-photo-355952.jpeg" alt="Inovacijos">
+<h3>Inovacijos</h3>
+<p>Nuolat ieškome naujų sprendimų, diegiame modernias technologijas ir kūrybiškas strategijas.</p>
+</div>
+<div class="img-card">
+<img src="https://images.pexels.com/photos/6814523/pexels-photo-6814523.jpeg" alt="Patikimumas">
+<h3>Patikimumas</h3>
+<p>Laikomės pažadų, laikomės terminų ir užtikriname skaidrų bendradarbiavimą su klientais.</p>
+</div>
+</div>
+</section>
+
+<section id="priorities">
+<h2>Mūsų prioritetai</h2>
+<div class="separator"></div>
+<p>Pagrindinis mūsų prioritetas – klientų sėkmė. Kiekvienas projektas pradedamas nuo detalaus verslo ir rinkos analizės, siekiant parinkti optimaliausias strategijas ir sprendimus.</p>
+<p>Skiriame ypatingą dėmesį inovacijoms, profesionalumui ir patikimumui, kad mūsų klientai pasiektų maksimalų rezultatą.</p>
+</section>
+
+<section id="contact">
+<h2>Kontaktai</h2>
+<div class="separator"></div>
+<div class="contact-info">
+<p>Girulių g. 10, LT-08303 Vilnius</p>
+<p><a href="mailto:info@mapiprojektai.com">info@mapiprojektai.com</a></p>
+</div>
+<form id="contactForm">
+<input type="text" id="name" placeholder="Jūsų vardas" required>
+<input type="email" id="email" placeholder="El. paštas" required>
+<textarea id="message" rows="5" placeholder="Jūsų žinutė" required></textarea>
+<button type="submit">Siųsti</button>
+<p class="success" style="display:none;">Jūsų žinutė sėkmingai išsiųsta!</p>
+<p class="error" style="display:none;">Įvyko klaida, patikrinkite įvestį.</p>
+</form>
+</section>
+
+<footer>
+<p>&copy; 2026 MAPI PROJEKTAI, MB | Visi teisės saugomi</p>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('section').forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100) { section.classList.add('show'); }
+  });
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const success = this.querySelector('.success');
+  const error = this.querySelector('.error');
+
+  if(name && email.includes('@') && message){
+    error.style.display='none';
+    success.style.display='block';
+    this.reset();
+  } else {
+    success.style.display='none';
+    error.style.display='block';
+  }
+});
+</script>
+
+</body>
+</html>
